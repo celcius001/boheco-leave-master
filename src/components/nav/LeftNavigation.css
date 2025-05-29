@@ -1,0 +1,71 @@
+:root {
+  /* ===== Colors ===== */
+  --body-color: #e4e9f7;
+  --sidebar-color: #ffffff;
+  --primary-color: #695cfe;
+  --toggle-color: #ddd;
+  --text-color: #707070;
+
+  /* ===== Transition ===== */
+  --trans-02: all 0.2s ease;
+  --trans-03: all 0.3s ease;
+  --trans-04: all 0.4s ease;
+  --trans-05: all 0.5s ease;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--body-color);
+}
+
+/* ===== Reusable Components ===== */
+.sidebar .text {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.sidebar .image {
+  min-width: 60px;
+  display: flex;
+  align-items: center;
+}
+
+/* ===== Sidebar ===== */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  background-color: var(--sidebar-color);
+}
+
+.sidebar header {
+  position: relative;
+}
+
+.sidebar .image_text img {
+  width: 40px;
+  border-radius: 6px;
+}
+
+.sidebar header .image_text {
+  display: flex;
+  align-items: center;
+}
+
+.header_text .name {
+  font-weight: 600;
+}
+
+.sidebar header .toggle {
+  position: absolute;
+  top: 50%;
+  right: -25px;
+  transform: translateY(-50%);
+  height: 25px;
+  width: 25px;
+  background-color: var(--primary-color);
+}
