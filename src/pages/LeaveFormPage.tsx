@@ -67,6 +67,11 @@ function LeaveFormPage() {
     console.log("Form submitted:", combinedData);
   };
 
+  const handleFethchData = async (e: React.KeyboardEvent<HTMLInputElement>) => {
+    console.log("Fetching data from API...", e);
+    console.log("ID entered:", formData.id);
+  };
+
   return (
     <div className="p-4">
       {/* Header */}
@@ -104,6 +109,11 @@ function LeaveFormPage() {
               name="id"
               disabled={false}
               onChange={handleInputChange}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  handleFethchData(e);
+                }
+              }}
             />
             {/* Name */}
             <FormInput label="Name" type="text" name="name" disabled={true} />

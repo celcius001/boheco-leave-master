@@ -7,6 +7,7 @@ function FormInput({
   name,
   placeholder,
   onChange,
+  onKeyDown,
   disabled,
   value,
 }: {
@@ -15,6 +16,7 @@ function FormInput({
   name: string;
   placeholder?: string;
   onChange?: (name: string, value: string) => void;
+  onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
   disabled: boolean;
   value?: string | number;
 }) {
@@ -31,6 +33,7 @@ function FormInput({
           name={name}
           placeholder={placeholder}
           onChange={(e) => onChange && onChange(name, e.target.value)}
+          onKeyDown={onKeyDown}
           disabled={disabled}
           value={value}
           required
